@@ -1,0 +1,17 @@
+<?php
+
+require_once("inc/_init.php");
+
+if(
+    !isset($_SESSION['ferghana_user']) 
+    || is_null($_SESSION['ferghana_user']['id_droit'])
+    || $_SESSION['ferghana_user']['id_droit'] > 1):
+
+    header('location:admin.php');
+
+endif;
+
+$query
+
+require_once('footer.php');
+?>

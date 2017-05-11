@@ -1,0 +1,94 @@
+<?php
+include_once('header.php');
+?>
+
+<script type = "text/javascript">
+
+"use strict";
+
+function showBigImg(id){
+
+     var div = "#img_big_"+id;
+ 
+     // ici on insère dans notre page html notre div gris
+     $(div).before('<div class="overlay" onClick = "hideBigImg();"></div>');
+     $(div).show(); 
+
+     // maintenant, on récupère la largeur et la hauteur de notre popup
+     /*var popupH = $(div).height();
+     var popupW = $(div).width();
+
+     // ensuite, on crée des marges négatives pour notre popup, chacune faisant
+     // la moitié de la largeur/hauteur du popup
+     $(div).css("margin-top", "-"   (popupH / 2)+"px");
+     $(div).css("margin-left", "-"  (popupW / 2)+"px");
+ 
+     // enfin, on fait apparaître en 300 ms notre div gris de fond, et une fois
+     // son apparition terminée, on fait apparaître en fondu notre popup
+     $(overlay).css('opacity', 0).fadeTo(300, 0.5, function () { $(div).fadeIn(500); });*/
+
+}
+
+function hideBigImg(){
+	$('.overlay').remove();
+	$('.custompopin').hide();
+}
+
+</script>
+
+	    <section>
+                <article>
+		    <img src = "img/small/registan-samarkand.jpg" onClick = "showBigImg('1');">
+		</article>
+                <article>
+		    <img src = "img/small/registan-medrese-ulugbek.jpg" onClick = "showBigImg('2');">
+		</article>
+                <article>
+		    <img src = "img/small/registan-tigre.jpg" onClick = "showBigImg('3');">
+		</article>
+                <article>
+		    <img src = "img/small/registan-tilla.jpg" onClick = "showBigImg('4');">
+		</article>
+            </section>
+
+	    <aside>
+		<h1>Place du Registan</h1>
+
+	<article class = "patrimoine">
+	<strong><i>Le Registan</i></strong>, la « place de sable », est le cœur battant de Samarcande, est l’un des plus majestueux ensembles d’Asie centrale et de l’Islam. La place du Registan servait aux châtiments corporels et aux exécutions publiques. C’est ici que le pouvoir était concentré, dans la prison, l’Hôtel des Monnaies et le palais de l’Émir. Ce n’est qu’en 1920 que fut détrôné le dernier émir, et que la place perdit son utilité originelle.
+	<br>
+	À l’époque de la route de la Soie se tenait en ces lieux un immense bazar où convergeaient toutes les caravanes arrivées aux quatre coins de la ville. Le petit-fils de Tamerlan y fit construire une première médersa au XV<sup>e</sup> &nbsp;siècle à laquelle vinrent s’ajouter au XVII<sup>e</sup> &nbsp;siècle deux autres médersas.
+	</article>
+
+	<article>
+	Si la première, <strong><i>la médersa Oulougbek</i></strong>, a conservé toute son authenticité, les plus récentes n’en sont pas moins toutes aussi éblouissantes. L’arrivée sur la place est réellement magique, pris entre ces trois bâtiments dignes des plus grandes fantaisies orientales, on ne sait plus où donner de la tête. Une élégance folle, un souci du détail remarquable, une profusion de couleurs vives… Le travail réalisé ici est vraiment majestueux.
+	</article>
+
+	<article>
+	Sur <strong><i>Chir Dor</i></strong>, la seconde médersa, des lions-tigres portent sur le dos des soleils à face humaine à la poursuite de biches blanches fuyant au milieu d'une épaisse végétation… Notez les représentations d’animaux stylisés qui innovaient par rapport au tabou de l’islam à propos de l’art figuratif, mais qui pouvaient se rapporter à un certain héritage zoroastrien. La légende raconte que l’architecte fut condamné pour hérésie, mais les mosaïques sont toujours là.
+	</article>
+
+	<article>
+	La troisième, moins haute, arbore une coupole bleue qui la distingue de ses sœurs. Son nom, <strong><i>Tilla Kari</i></strong>, signifie « couverte d’or » et c’est en effet le cas pour l’intérieur notamment pour l’envers du dôme où les feuilles d’or dessinent des cercles à l’infini. À l’intérieur, comme c’est le cas pour les autres, les marchands de tapis et autres ont pris la place des étudiants dans les cellules et négocient avec les visiteurs.
+	</article>
+
+	<article style = "height:auto;">
+	N’oubliez pas de repasser de nuit, des gradins positionnés face à la troisième médersa vous permettront de vous asseoir pour assister au spectacle sons et lumières qui est donné chaque soir sur la place entre kitch et magie.
+	</article>
+
+	    </aside>
+
+<div class = "custompopin" id = "img_big_1"><img src = "img/big/registan-samarkand.jpg" onClick = "hideBigImg();"></div>
+<div class = "custompopin" id = "img_big_2"><img src = "img/big/registan-medrese-ulugbek.jpg" onClick = "hideBigImg();"></div>
+<div class = "custompopin" id = "img_big_3"><img src = "img/big/registan-tigre.jpg" onClick = "hideBigImg();"></div>
+<div class = "custompopin" id = "img_big_4"><img src = "img/big/registan-tilla.jpg" onClick = "hideBigImg();"></div>
+<div class = "custompopin" id = "img_big_5"><div>sdfqsdfsfsfsdf</div></div>
+
+<?php
+    include_once('footer.php');
+?>
+
+
+
+
+

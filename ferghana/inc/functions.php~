@@ -1,0 +1,43 @@
+<?php
+
+    //Détection de langue à utiliser.
+    function languageGet(){
+
+	//Si l'utilisateur est enregistré, on récupère sa langue habituelle.
+        if(user_is_logged()):
+            if(isset($_SESSION['ferghana_pref_language'])):
+		$lang = $_SESSION['ferghana_pref_language'];
+                languageRegister($lang);
+                return($lang);
+            endif;
+	endif;
+
+	//Pas d'information en BDD ou utilisateur non loggé : On vérifie les cookies 
+	if(isset($_COOKIE['ferghana_pref_language'])):
+            $lang = $_COOKIE['ferghana_pref_language'];
+        else:
+
+            //Pas de cookie ou d'information en BDD : on récupère la langue du navigateur
+	    $lang = substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
+
+        endif;
+
+	languageRegister($lang);
+        return $lang;
+    }
+
+    //On vérifie si un user est loggé ou non.
+    function userIsLogged(){
+        return false;
+    }
+
+    //Enregistrement de la langue à utiliser
+    function languageRegister($lang){
+	$_SESSION['ferghana_pref_language'] = $lang;
+        setcookie('ferghana_pref_language',$lang);
+	if(userIsLogged()):
+            //TODO : enregistrment en base de données.
+	endif;
+    }
+    
+?>

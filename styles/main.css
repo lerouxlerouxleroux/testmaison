@@ -1,0 +1,329 @@
+body{
+    text-align:center;
+    /*background-color:#DE6D35;*/
+    background-repeat:no-repeat;
+    background-image:linear-gradient(#DE6D35, white);
+}
+
+body, textarea{
+    font-family:"Cabin", "verdana";
+    line-height:1.3em;
+}
+
+h1,h2,h3{
+    font-family:"Amaranth", "verdana";
+    line-height:7px;
+    clear:both;
+    color:#DE6D35;
+}
+
+strong,bold{
+ color:#DE6D35;
+}
+
+h1{
+    font-weight:bold;
+    font-size:24px;
+}
+
+h2{
+    font-weight:bold;
+    font-size:18px;
+}
+
+
+a img{
+    border:none;
+}
+
+header{
+    height:120px;
+    text-align:left;
+}
+
+footer{
+    clear:both;
+    text-align:center;
+    position:absolute;
+    bottom:0px;
+    font-weight:bold;
+    color:#000000;
+}
+
+header, footer{
+    background-image: url('/img/motif.jpg');
+    position:relative;
+    width:970px;
+    margin:auto;
+    padding:15px;
+    
+}
+
+section, aside{
+    float:left;
+    padding:7px;
+}
+
+
+section{
+    width:302px;
+    padding-top:54px;
+}
+
+section.gastronomie, section.contact{
+    width:970px;
+    padding-top:0px;
+}
+
+section.contact{
+    height:470px;
+    text-align:center;
+}
+
+section.gastronomie article, section.contact article{
+    border:none;
+    text-align:left;
+}
+
+section.infos{
+    padding-top:0px;
+}
+
+section.infos article{
+    border-top:none;
+    padding-top:0px;
+    width:980px;
+    height:auto;
+}
+
+section.infos article.map{
+    height:480px;
+}
+
+aside{
+    width:650px;
+}
+
+#content{
+    margin:auto;
+    width:1000px;
+    text-align:left;
+    position:relative;
+    /*border: 5px solid #fff;*/
+    -moz-box-shadow: 8px 8px 12px #aaa; 
+    -webkit-box-shadow: 8px 8px 12px #aaa; 
+    box-shadow: 8px 8px 12px #555; 
+    zoom: 1;
+    background-color:#FFFFFF;
+}
+
+#logo{
+    float:left;
+    width:100px;
+    height:100px;
+}
+
+#accroche{
+    float:left;
+    width:870px;
+    text-align:center;
+    padding-top:10px;
+}
+
+nav{
+    float:left;
+    width:850px;
+    position:relative;
+    bottom:67px;
+}
+
+nav ul{
+    list-style-type:none;
+    position:relative;
+    top:75px;
+    margin-left:10px;
+}
+
+nav ul li{
+    width:340px;
+    float:left;
+    margin-right:17px;
+    width:180px;
+    height:40px;
+    background-image:url('/img/btn/btn_on.png');
+    cursor:pointer;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul li:hover{
+    background-image:url('/img/btn/btn_off.png');
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#DE6D35;
+    font-family:"Amaranth", "verdana";
+    position:relative;
+    top:6px;
+}
+
+nav ul li a:hover, nav ul li a.active{
+    color:#DEDEDE;
+}
+
+article{
+    text-align:justify;
+    padding-bottom:7px;
+    height:190px;
+    border-top:1px dotted lightblue;
+    padding-top:7px;
+}
+
+article img{
+    cursor:pointer;
+}
+
+.overlay{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: black;
+     z-index: 1999;
+     opacity: 0.5;
+}
+
+
+
+.custompopin{
+     position: fixed;
+     display:none;
+     /*left: 50%;
+     top: 50%;*/
+     z-index: 2000;
+     padding: 20px;
+     width: 560px;
+     font-size: 12px;
+     line-height: 16px;
+     color: #202020;
+}
+
+section.gastronomie ul li{
+    list-style-type:none;
+}
+
+section.gastronomie img{
+    cursor:auto;
+}
+
+section.gastronomie ul.recette li{
+    float:left;
+    margin-right:40px;
+    margin-bottom:7px;
+    width:420px;
+    height:170px;
+}
+
+section.gastronomie ul.recette li span, section.gastronomie ul li img{
+    float:left;
+}
+
+section.gastronomie ul.recette li img{
+    margin-right:12px;
+}
+
+section.gastronomie ul.recette li span.num{
+    width:20px;
+    height:20px;
+    text-align:center;
+    background-color:#34DDDD;
+    padding:7px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-right:3px;
+}
+
+section.gastronomie ul.recette li{
+    padding-top:7px;
+    border-top:1px dotted #34DDDD;
+}
+
+input[type=text], textarea, input[type=submit]{
+    display:block;
+    clear:left;
+    width:100%;							
+}
+
+input[type=text]{
+	height:30px;
+}
+
+input[type=text],textarea{
+border:1px solid #DADADA;
+margin-top:15px;
+/* For I.E */
+margin-bottom:15px;
+padding-left:10px;
+width:970px;
+font-size:12px;
+box-shadow:0 0 5px;
+-webkit-box-shadow:0 0 5px;
+/* For I.E */
+-moz-box-shadow:0 0 5px;
+/* For Mozilla Web Browser */
+border-radius:5px;
+-webkit-border-radius:5px;
+/* For I.E */
+-moz-border-radius:5px
+/* For Mozilla Web Browser */
+margin-left:50px;
+}
+
+textarea{
+    font-size:14px;
+    padding-top:7px;
+}
+
+input[type=submit]{
+	border:solid 1px #ccc; 
+	padding:15px 30px; 
+	margin:0 0 20px; 
+	font-size:1.2em;
+
+	font-weight:bold;
+	color:#DE6D35;
+	cursor:pointer;
+    width:985px;
+}
+
+div.success{
+    height:20px;
+    color:green;
+}
+
+sup{
+    position:absolute;
+}
+
+.custompopin div{
+    width:400px;
+    height:400px;
+    background-color:#FFFFFF;
+    z-index-999;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+    padding:10px;
+}
+
+.patrimoine strong{
+    font-style:italic;
+}
+
+
+
+

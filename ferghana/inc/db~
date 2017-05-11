@@ -1,0 +1,14 @@
+<?php
+$host = "localhost";
+$user = "root";
+$password = "Br1anB0ru";
+$base = "ferghana";
+
+$link = mysql_connect($host, $user, $password)
+    or die("Impossible de se connecter : " . mysql_error());
+
+mysql_select_db ($nom_base) or die ('ERREUR '.mysql_error());
+
+echo "DB OK";
+
+?>
